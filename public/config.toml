@@ -1,4 +1,4 @@
-baseURL = 'https://penn-dinosaurs.github.io/'
+baseURL = 'https://github.com/penn-dinosaurs/penn-dinosaurs.github.io/tree/gh-pages/public'
 languageCode = 'en-us'
 theme = "ananke"
 title = 'My New Hugo Site. hello World!'
