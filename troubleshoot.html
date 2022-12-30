@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ESE 5190 Final Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!--<div class="topNav">
+        <ul class="topNavContent">
+          <li>Brahmapur, India</li>
+          <li>pdebasish624@gmail.com</li>
+          <li>333333333</li>
+        </ul>
+      </div>-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style=" color: rgba(22,116,24,0.7); font-weight:bold; ">Penn Dinosaurs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" name="button" data-target="#myNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav ml-auto">
+            <li><a class="nav-link" href="https://github.com/penn-dinosaurs/ESE-519-FINAL-PROJECT-Penn-Dinosaurs">Project</a></li>
+            <li><a class="nav-link" href="about.html">About Us</a></li>
+          </ul>
+          </div>
+      </nav>
+      <div class="bottomNav"></div>
+      </div>
+
+          <div class="container" style="margin-bottom:70px;">
+
+
+              <div class="troubleshoot" style="margin-top:80px; padding:20px;">
+                <p class="lead">
+                  <h1>Troubleshooting:</h1>
+                  We worked with various components on this project, therefore certain Wrong Circuit
+Connections, Debugging problems, Run Time Errors, and so on were inevitable. The following
+are some of the troubleshooting steps we took during this project.
+                </p>
+
+                <p class="lead">
+                  <h2 style="margin-top:50px;">Dino Game :</h2><br>
+                  <h5>Problem 1:</h5> No VGA signal was detected on the computer screen.<br>
+                  <h5>Debugging+Solution:</h5>
+                  a. Use the oscilloscope to test signal→ signal is transmitted properly.<br>
+                  b. Change the DVI to VGA cable to the normal VGA cable.<br>
+                  <h5>Result: VGA signal detected</h5>
+                  <h5>Problem 2:</h5> VGA signal detected, nothing displayed.
+                  <h5>Debugging and Solution:</h5>
+                  a. Used 330 k ohm instead of 330 ohm.<br>
+                  b. Solution: Replace all the resistors to 330 ohm( 2*150 ohm,3*10 ohm, connected
+                  in series)<br>
+                  <h5>Result:</h5> The example code is working<br>
+                  <h5>Problem 3:</h5> The push button is not working.
+                  <h5>Debugging and Solution:</h5> Wrong connecting way of push button—correct the
+                  connection.
+                  <h5>Problem 4:</h5> There is some display issue.
+                  <h5>Debugging and Solution:</h5> Solved using the vga_graphics.c functions.
+                  <h5>Problem 5:</h5> How to create images of dinosaurs and cactus.<br>
+                  <h5>Debugging and Solution:</h5> Use Bitmaps.<br>
+                  <h5>Problem 6:</h5> Adding Sound Effects.<br>
+                  <h5>Debugging and Solution:</h5> -Currently we are able to generate any mp3 audio to
+                  speaker PWM output. But that is not working in dino games. So currently working on it.
+                  <h5>Problem 7:</h5> Adding Sound Effects to the game.<br>
+                  <h5>Debugging and Solution:</h5> The problem we faced was because their were interrupts
+                  already present in the game. Now the PWM sound code also is based on IRQ. Hence, it
+                  caused the issue. Thus to solve the issue we had to create another separate pwm driver
+                  c code “pwmsnd” to enable the synchronized functionality of game and sound.<br>
+                  <h5>Problem 8: </h5>The Push button is too small and does not feel nice while playing.
+                  <h5>Debugging and Solution:</h5> We used a big “light enabled” push button and we designed
+                  a 3-D printed model to hold the button.<br>
+                  <h5>Problem 9:</h5> Wanted to make the game more interesting.<br>
+                  <h5>Debugging and Solution:</h5> Created 3 different levels, with different high score buffers
+                  to keep the game interesting and competitive.<br>
+                </p>
+                <p class="lead">
+                  <h2 style="margin-top:50px;">Face Detecting Pan-Tilt Camera :</h2><br>
+                  <h5>Problem 1:</h5> In this step, we first considered using the Arducam on the Pico4ML board to
+                  detect humans. However, this board's storage capacity was only 2MB. And after we installed
+                  Circuitpython, this memory space was reduced to 0.9MB.<br>
+                  <h5>Debugging and Solution:</h5> Then we decided to implement this part of the project using the
+                  Raspberry Pi 4 board in order to get some functionality working before the demo day.<br>
+                  <h5>Problem 2:</h5> Finding Proper Machine Learing Model to efficiently detect the person’s face using
+                  the specifics of camera.<br>
+                  <h5>Debugging and Solution:</h5> We found the the “haarcascade_frontalface_default.xml” to be
+                  very efficient for our camera and a low size model.<br>
+                  <h5>Problem 3:</h5> Issue while moving servos<br>
+                  <h5>Debugging and Solution:</h5> Pimoroni Pan-Tilt hat: uses PIC 16F 1503 with custom hardware
+                  and talks over I2C. However, the ArduCam Pan Tilt platform did not have any such servo-driver
+                  boards. The PIC 16F 1503 has a wide range of libraries that has been already used by users in
+                  face recognition pan tilt. However, the Arducam’s library is pretty limited. Hence, most of the
+                  programs already presented on the internet do not work.<br>
+                  We found adafruit has a servo motor library named “adafruit_servokit”, which was a very
+                  useful point of reference for designing our program which is related to controlling the Pan-Tilt.
+                  We had to create our own functions to provide accurate shift angles related to the person’s
+                  movement.<br>
+                  <h5>Problem 4:</h5> Adjusting the proportional Movement and the default angle.<br>
+                  <h5>Debugging and Solution:</h5> It was a time consuming process and required a lot of fine tuning. It
+                  was a matter of experimenting with different values until we found the optimal values of
+                  proportional turns, error compensations and default angles, to make our person tracking
+                  feature flawless.<br>
+                </p>
+                <p class="lead">
+                  <h2 style="margin-top:50px;">Human Interaction Interface:</h2><br>
+                  <h5>Issue 1:</h5> Display issue<br>
+                  1. There is blacklight in the LCD, which means it is functioning well, but no images
+                  displayed as expected.<br>
+                  2. The ST7735 used in the example has a different Pin number, which means the jump wire
+                  connection will be different.<br>
+                  <h5>Debugging and Solution:</h5> we find the pin function distribution of the ST7735 used in the
+                  video and the Pin value defined in the code to determine the wire connection.Then, we also
+                  find the Pin distribution of the ST7735 we are going to use, connect it based on the wire
+                  connection.<br>
+                  <h5>Issue 2:</h5> input issue<br>
+                  1. The lCD is functioning, however, it could not display an input of more than two
+                  characters. The solutions mentioned online have been tried but failed.<br>
+                  <h5>Debugging and Solution:</h5> We used the circuit python instead.<br>
+                  <h5>Issue 3 - Storage Issue:</h5>
+                  1. Previously, we intended to utilize "Mono class D audio amp with 8 1W speaker" while
+                  working with the speaker for music playback. We had to save some mp3 files in the
+                  Raspberry Pi Pico's circuit python library. However, the Pico's 2MB on-board QSPI
+                  memory and 264KB on-chip RAM were insufficient for storage.<br>
+                  <h5>Debugging and Solution:</h5> Because Mp3 files take up more memory, we had to compress
+                  some of them, eliminate some unneeded program files from the CircuitPython Library, and then
+                  store some highly compressed mp3 files in it.<br>
+                  <h5>Issue 4 - Noise Issue:</h5>
+                  1. Despite the fact that we fix Issue 3 by reducing the music files and eliminating certain
+                  unneeded files from the circuit python library. However, when playing the song, we
+                  heard a lot of noise.<br>
+                  <h5>Debugging and Solution:</h5> To address this, instead of a 1W speaker, we utilized a Mono
+                  Enclosed Speaker - 3W 4 Ohm, which considerably enhanced audio quality. In addition, a 1nF
+                  capacitor was shunted with the Data signal and ground.<br>
+                </p>
+
+
+                </div>
+          </div>
+
+      <!--footer-->
+      <div class="container-fluid">
+        <footer>
+          <center><p>Penn Dinosaurs</p></center>
+        </footer>
+      </div>
+  </body>
+</html>
