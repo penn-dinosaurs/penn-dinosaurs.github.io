@@ -1,0 +1,122 @@
+.topNav{
+  background-image: linear-gradient(to right, rgba(159, 144, 104,0.7) , rgb(255, 255, 255) );
+    padding: 0.05px;
+}
+.topNavContent{
+  margin-top: 3px;
+  display:flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-left: -35px;
+}
+
+.navbar-brand{
+  color: rgb(11,270,70);
+}
+.bottomNav{
+    background-color:rgb(16,75,16);
+    margin-top: auto;
+    position: relative;
+    padding: 0.05px;
+}
+.container .row1{
+  margin-top: 25px;
+  display: flex;
+  justify-content:center;
+}
+.container .row img{
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+}
+.myInfo{
+  padding: 20px;
+  align-self: center;
+  font-family: monospace;
+}
+
+.myInfo h5{
+  color: rgba(24,151,24,0.7);
+}
+.myInfo p{
+  margin-top: 15px;
+  font-family: serif;
+  font-size: 18px;
+}
+.myInfo button{
+  background-color:rgba(24,151,24,0.6);
+}
+
+.row2{
+  margin-top: 90px;
+  position: relative;
+}
+
+.row3{
+  margin-top: 10px;
+  position: relative;
+}
+.row3 ul{
+  display: flex;
+  justify-content: space-between;
+}
+.row3 .nav-link{
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+.row5{
+  margin-top: 150px;
+}
+footer{
+  background-color:rgba(24,151,24,0.4);
+  height: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  color: black;
+  text-align: center;
+  font-size: 13px;
+}
+.R1{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 30px;
+  border-bottom: 3px solid  rgb(75, 70, 57);
+}
+
+#research{
+  margin-top: 130px;
+}
+#research .nav-link{
+  background-color: rgba(24,151,24,0.3);
+}
+#certifications{
+  margin-top: 130px;
+}
+#publications{
+  margin-top: 130px;
+  margin-bottom: 50px;
+}
+#myNavbar a{
+  color: rgba(22,116,24,0.6);
+  font-weight: bold;
+}
+#Publication_1{
+  margin-top: 35px;
+}
+
+@media (max-width: 800px) {
+  .row1{
+    display: block;
+  }
+  footer{
+    visibility: hidden;
+  }
+  .topNav .topNavContent{
+    visibility: hidden;
+  }
+}
