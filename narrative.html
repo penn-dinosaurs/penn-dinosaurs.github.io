@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ESE 5190 Final Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!--<div class="topNav">
+        <ul class="topNavContent">
+          <li>Brahmapur, India</li>
+          <li>pdebasish624@gmail.com</li>
+          <li>333333333</li>
+        </ul>
+      </div>-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style=" color: rgba(22,116,24,0.7); font-weight:bold; ">Penn Dinosaurs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" name="button" data-target="#myNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav ml-auto">
+            <li><a class="nav-link" href="https://github.com/penn-dinosaurs/ESE-519-FINAL-PROJECT-Penn-Dinosaurs">Project</a></li>
+            <li><a class="nav-link" href="about.html">About Us</a></li>
+            <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+          </div>
+      </nav>
+      <div class="bottomNav"></div>
+      </div>
+
+          <div class="container">
+            <div class="insp" style="margin-top:80px; padding:20px;">
+              <center><h1 style="color:rgb(34, 139, 34); margin-bottom:50px;">Our Journey</h1></center>
+              <p class="lead">
+                In the original proposal, The main focus was to have some sub-projects that employ the concept of PIO and the varied, powerful features of RP2040 that we learned during the class. The primary purpose was to design a greeting system to make people's life easier during the waiting room. Hence, the original proposal has been separated into four parts. The first part was to use the PIO and other features of the RP2040 to create the dino game based on the VGA concept and example. The second part was to use the camera for human detection so that once a human is detected, the LCD, the third part of the project, could display some greeting sentences and introduce them to the dino game. And the LCD part was planned to be achieved with C language. As for the fourth part, we are considering using a servo motor to drive a 3D-printed greeting hand, which will be triggered to wave to the detected person. <br><br>
+
+                After discussing with the professor, we decided to make some changes based on the suggestions. And there are three main changes. First, the 3D-printed hand was removed. Second, A speaker was suggested to be added to the LCD part. Thirdly, instead of using the camera to detect people, it was recommended to use the camera to track people after the detection of the incoming person. As a result, the project's purpose changed to the design of a customer-experience enhancement system. To make the three parts more reasonable, we decided to design a system to help the customer take care of their children safely and finally help to improve the customer's experience by letting them do their business without worries about the safety of their children. <br><br>
+                From a technical point of view, we decided not to use person detection because machine learning models on Pico4ML are inaccurate and provide erroneous results. Moreover, we decided to use a VGA display instead of a small "st7735s" because a VGA display will not only make the gaming experience better but also provide us with an opportunity to exploit the PIO feature of RP2040. <br><br>
+
+                On the midpoint demo day, we successfully showed the dino game with one difficulty level and functional working of the entire game. And the LCD example code was working perfectly. Based on the suggestions, we decided to add some sounds to the dino game and more difficulty levels.  <br><br>
+                And During the midpoint demo day, we found that PICO4ML was unsuitable for person detection and tracking due to all types of reasons, primarily the limited space of 1mb, which made it impossible for us to implement both the OpenCV model and Machine Learning model at the same time. We decided to go for Rasberry Pi 4.<br><br>
+
+                From the midpoint to the final demo day, We faced several difficulties. I will mention a few, and you guys can find most of them in the troubleshooting section. Integrating the PWM audio with the game took us a lot of days. The problem we faced was that interruptions were already present in the game. Now the PWM sound code also is based on IRQ. Hence, it caused the issue. Thus to solve the problem, we had to create another separate PWM driver c code, "pwmsnd" to enable the synchronized functionality of the game and sound. Implementing the pan-tilt person tracking camera would be very easy as many people on the internet had previously done it. But the exciting part was almost every code used the Pimoroni Pan-Tilt HAT, which has a servo driver inbuilt into the board.<br><br>
+                Moreover, pimroni has an extensive library for easy implementation. This was not the case for us, we had two servos to control, and pimroni library was not meant to control our mini-pan-tilt. Worse, we needed more time to order new parts. So we decided to write our own library and code to make the person detection pan-tilt work. With days of hard work and a lot of tuning, we achieved our goal and made the pan-tilt person-detecting camera work flawlessly. Our journey with the Human Interaction Interface also faced a lot of hurdles. We shifted from "c" to circuit python because of the following reason. When we were trying to use the LCD with C, we encountered difficulties in inputting more than one character at one time and storing the audio file. Hence, we decided to use micropython to write the code for the LCD and speaker. We also used a low-pass circuit to reduce the noise in the output music. This combined use of LCD and speaker was used first to greet people like a "Google assistant" and offer them options for the music displayed in the speaker. <br><br>
+
+                This is a small overview of our journey from the proposal day to the final demo day. Thanks for reading.
+                  </p>
+              </div>
+          </div>
+
+      <!--footer-->
+      <div class="container-fluid">
+        <footer>
+          <center><p>Penn Dinosaurs</p></center>
+        </footer>
+      </div>
+  </body>
+</html>
