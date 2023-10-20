@@ -183,3 +183,30 @@ footer{
 .pdf-container embed {
     width: 100%;
 }
+
+
+
+.equal-size-project {
+  border: 1px solid #ddd; /* Add a border around the element */
+  display: flex; /* Use flexbox to manage content layout */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space content evenly */
+  padding: 10px; /* Add some padding for spacing */
+}
+
+.project-thumbnail {
+  flex: 1; /* Allow the thumbnail to grow as needed */
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  h3 {
+      font-size: 25px; /* Adjust the font size for headings */
+  }
+
+  p {
+      font-size: 20px; /* Adjust the font size for paragraphs */
+  }
+}
