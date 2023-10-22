@@ -245,7 +245,9 @@ footer{
 }
 
 /* Add more styling as needed */
-
+.custom-image {
+  margin-top: 70px; /* Adjust margin-top for screens below 400px width */
+}
 
 }
 
