@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>SOUMYA DASH</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -57,7 +59,7 @@
 
   </head>
   <body>
-      <div class="container-fluid">
+      <!--<div class="container"> 
         <!--<div class="topNav">
           <ul class="topNavContent">
             <li>Brahmapur, India</li>
@@ -66,7 +68,7 @@
           </ul>
         </div>-->
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.8); position: fixed; top: 0; width: 100%; border-bottom: 2px solid #16B818;">
-          <div class="container">
+          <div class="container-fluid">
               <a class="navbar-brand" href="#" style="color: rgba(22, 116, 24, 0.7); font-weight: bold;">Soumya Dash</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
                   <span class="navbar-toggler-icon"></span>
@@ -89,6 +91,7 @@
               </div>
           </div>
       </nav>  
+    
       
 
         <div class="bottomNav"></div>
@@ -105,31 +108,28 @@
 
             <div class="myInfo">
               <center>
-                <h1 style="color:rgb(34, 139, 34);">Hello, Welcome to the page!</h1>
-                <h6 class="lead" style="margin-top:25px; padding:5px">
-                  Here, You can know more about <mark>"me"</mark> and <mark>"Things I do"</mark> 
-                  <br><br><br>
-                  <div class="row">
-                    <div class="col">
-                      <button class="btn btn-primary custom-button" onclick="scrollToBiography()">About</button>
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-success custom-button" onclick="scrollToEducation()">Education</button>
-                    </div>
-                    <div class="col">
-                        <button class="btn btn-danger custom-button" onclick="scrollToExperience()">Experiences</button>
-                    </div>
-                    <div class="col">
-                      <button class="btn btn-danger custom-button" onclick="scrollToProject()">Projects</button>
-                  </div>
-                </div>
-                  <!--<a href="#about"> <mark>About</mark> </a> --> 
-                </h6>
-              <!--  <a href="#about"><button class="btn btn-lg" type="button" name="button">Explore</button></a>-->
-            </center>
-            </div>
-
+                  <h1 style="color:rgb(34, 139, 34);">Hello, Welcome to the page!</h1>
+                  <h6 class="lead" style="margin-top:25px; padding:5px">
+                      Here, You can know more about <mark>"me"</mark> and <mark>"Things I do"</mark>
+                      <br><br><br>
+                      <div class="row">
+                          <div class="col">
+                              <button class="btn btn-primary custom-button" onclick="scrollToBiography()">About</button>
+                          </div>
+                          <div class="col">
+                              <button class="btn btn-success custom-button" onclick="scrollToEducation()">Education</button>
+                          </div>
+                          <div class="col">
+                              <button class="btn btn-danger custom-button" onclick="scrollToExperience()">Experiences</button>
+                          </div>
+                          <div class="col">
+                              <button class="btn btn-danger custom-button" onclick="scrollToProject()">Projects</button>
+                          </div>
+                      </div>
+                  </h6>
+              </center>
           </div>
+          
 
           <div class="container-fluid">
 
@@ -209,37 +209,35 @@
           
           <div id="education" style="padding: 30px; margin-top: 100px;">
             <h2 style="color: #333; font-weight: bold;">Education</h2>
-      
+        
             <div class="row" style="margin-top: 30px;">
-              <!-- On larger screens, divide into two separate divisions -->
-              <div class="col-lg-6">
-                <div style="border: 1px solid #ddd; padding: 20px; height: 100%;">
-                  <h3 style="color: #555; font-size: 18px;">University of Pennsylvania</h3>
-                  <ul style="color: #777; list-style-type: disc; margin-left: 20px;">
-                    <li>Master of Science in Engineering: Electrical Engineering</li>
-                    <li>Aug '22 - May '24 (Expected)</li>
-                    <li>GPA - Ongoing</li>
-                  </ul>
+                <div class="col-xs-12 col-lg-6">
+                    <div style="border: 1px solid #ddd; padding: 20px; height: 100%;">
+                        <h3 style="color: #555; font-size: 18px;">University of Pennsylvania</h3>
+                        <ul style="color: #777; list-style-type: disc; margin-left: 20px; padding-left: 0;">
+                            <li>Master of Science in Engineering: Electrical Engineering</li>
+                            <li>Aug '22 - May '24 (Expected)</li>
+                            <li>GPA - Ongoing</li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-      
-              <div class="col-lg-6">
-                  <div style="border: 1px solid #ddd; padding: 20px; height: 100%;">
-                      <h3 style="color: #555; font-size: 18px;">NIST Berhampur</h3>
-                      <ul style="color: #777; list-style-type: disc; margin-left: 20px;">
-                          <li>Bachelor of Technology: Electronics & Communication Engineering</li>
-                          <li>Aug '18 - June '22</li>
-                          <li>GPA - 3.5/4.0</li>
-                      </ul>
-                  </div>
-              </div>
-
+        
+                <div class="col-xs-12 col-lg-6">
+                    <div style="border: 1px solid #ddd; padding: 20px; height: 100%;">
+                        <h3 style="color: #555; font-size: 18px;">NIST Berhampur</h3>
+                        <ul style="color: #777; list-style-type: disc; margin-left: 20px; padding-left: 0;">
+                            <li>Bachelor of Technology: Electronics & Communication Engineering</li>
+                            <li>Aug '18 - June '22</li>
+                            <li>GPA - 3.5/4.0</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-          </div>
+        </div>
+        
               
           
-          <div id="work-experience" style="padding: 30px; margin-top: 100px;">
+          <div id="work-experience" style="margin-top: 100px;">
                 <h2 style="color: #333; font-weight: bold;">Work Experiences</h2>
                 
                 <div class="row" style="margin-top: 30px;">

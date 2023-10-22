@@ -200,9 +200,52 @@ footer{
 
 
 
-@media screen and (max-width: 768px) {
-
-  p {
-      font-size: 25px; /* Adjust the font size for paragraphs */
+@media screen and (max-width: 400px) {
+  ul {
+      padding-left: 0; /* Remove padding for all unordered lists */
   }
+  li {
+      margin: 0; /* Remove margin for all list items */
+      line-height: 1.2; /* Reduce line height for more compact text */
+  }
+
+  #education .col-xs-12 {
+    padding: 0; /* Remove padding for all columns on small screens within the "education" block */
 }
+#education ul {
+    padding-left: 0; /* Remove padding for all unordered lists within the "education" block */
+}
+#education li {
+    margin: 0; /* Remove margin for all list items within the "education" block */
+    line-height: 1.2; /* Reduce line height for more compact text within the "education" block */
+}
+
+
+.myInfo {
+  text-align: center;
+}
+
+.custom-button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#myInfoButtons {
+  margin-top: 20px;
+}
+
+#myInfoButtons .col {
+  padding: 5px;
+}
+
+#myInfoButtons .col button {
+  font-size: 18px;
+}
+
+/* Add more styling as needed */
+
+
+}
+
